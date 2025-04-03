@@ -15,7 +15,7 @@ export default function SignUp() {
        <h4 className='mb-2'>Register Now :</h4> 
 
         {/* Name Input */}
-        <Form.Group className="mb-3"  controlId="formBasicName">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" placeholder="Enter Name" />         
         </Form.Group>
@@ -32,15 +32,10 @@ export default function SignUp() {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
-         {/* Age Input */}
-         <Form.Group className="mb-3" controlId="formBasicAge">
-          <Form.Label>Age</Form.Label>
-          <Form.Control type="text" placeholder="Enter Age" />         
-        </Form.Group>
-         {/* Phone Input */}
-         <Form.Group className="mb-3" controlId="formBasicPhone">
-          <Form.Label>Phone</Form.Label>
-          <Form.Control type="text" placeholder="Enter Phone" />         
+         {/* Name Input */}
+         <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter Name" />         
         </Form.Group>
           {/* Submit Button */}
           <Button variant="primary" type="submit">

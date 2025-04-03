@@ -33,12 +33,12 @@ export default function SignUp() {
         </Form.Group>
 
          {/* Age Input */}
-         <Form.Group className="mb-3" controlId="formBasicAge">
+         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Age</Form.Label>
           <Form.Control type="text" placeholder="Enter Age" />         
         </Form.Group>
          {/* Phone Input */}
-         <Form.Group className="mb-3" controlId="formBasicPhone">
+         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Phone</Form.Label>
           <Form.Control type="text" placeholder="Enter Phone" />         
         </Form.Group>
