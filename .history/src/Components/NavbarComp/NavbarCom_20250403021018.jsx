@@ -19,11 +19,11 @@ export default function  NavbarCom() {
           
           
           <Nav className="ms-auto d-flex gap-2">
-          <NavLink to={'signup'} className=" text-white text-start text-decoration-none">
-           <p className='mb-0 fw-semibold'>Register</p>           
+          <NavLink to={'login'} className=" text-white text-start text-decoration-none">
+           <p className='mb-0 fw-semibold'>Logout</p>           
           </NavLink>
           <NavLink to={'login'} className=" text-white text-start text-decoration-none">
-           <p className='mb-0 fw-semibold'>Login</p>           
+           <p className='mb-0 fw-semibold'>Logout</p>           
           </NavLink>
           <NavLink to={"note"}>
           <div className="text-start">

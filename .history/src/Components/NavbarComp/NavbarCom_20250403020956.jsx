@@ -16,15 +16,19 @@ export default function  NavbarCom() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          
-          
-          <Nav className="ms-auto d-flex gap-2">
-          <NavLink to={'signup'} className=" text-white text-start text-decoration-none">
-           <p className='mb-0 fw-semibold'>Register</p>           
+
+        <Nav className="ms-auto d-flex gap-2">
+          <NavLink to={"note"}>
+          <div className="text-start">
+            <i class="fa-solid fa-box-open text-white mb-0"></i>
+            </div>
           </NavLink>
           <NavLink to={'login'} className=" text-white text-start text-decoration-none">
-           <p className='mb-0 fw-semibold'>Login</p>           
+           <p className='mb-0 fw-semibold'>Logout</p>           
           </NavLink>
+           </Nav>
+          
+          <Nav className="ms-auto d-flex gap-2">
           <NavLink to={"note"}>
           <div className="text-start">
             <i class="fa-solid fa-box-open text-white mb-0"></i>

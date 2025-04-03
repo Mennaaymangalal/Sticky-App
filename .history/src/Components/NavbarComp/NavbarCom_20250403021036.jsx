@@ -23,7 +23,7 @@ export default function  NavbarCom() {
            <p className='mb-0 fw-semibold'>Register</p>           
           </NavLink>
           <NavLink to={'login'} className=" text-white text-start text-decoration-none">
-           <p className='mb-0 fw-semibold'>Login</p>           
+           <p className='mb-0 fw-semibold'>Logout</p>           
           </NavLink>
           <NavLink to={"note"}>
           <div className="text-start">

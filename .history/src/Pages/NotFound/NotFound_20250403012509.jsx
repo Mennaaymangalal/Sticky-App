@@ -4,7 +4,7 @@ import img2 from "../../assets/download.png"
 export default function NotFound() {
   return (
     <>
-     <div className="container mt-4">
+     <div className="container my-4">
   <div className="d-flex flex-column flex-md-row align-items-center">
     
     {/* Left Column: Vertically Centered Text */}
