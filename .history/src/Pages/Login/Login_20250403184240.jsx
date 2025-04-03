@@ -14,7 +14,7 @@ export default function Login() {
  
   const  initialValues={
     "email":"mohamedali9999999999@gmail.com",
-    "password":"A123",   
+    "password":"Am1mk23@",   
   }
 
   function onSubmit(values) {
@@ -45,7 +45,7 @@ const validationSchema = Yup.object({
 
   return (
     <>    
-     <div className="container my-5 ">     
+     <div className="container my-4 ">     
       <div className="d-flex flex-column flex-md-row">
         <div className="col-md-6">
           <img src={img} alt="image" className="img-fluid w-100 h-auto"/>
