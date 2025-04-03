@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import img from "../../assets/Image Apr 3, 2025, 01_11_06 PM.png"
 import { Button, Form, Spinner } from 'react-bootstrap'
 import { useFormik } from 'formik'
 import * as Yup from "yup"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { authContext } from '../../Contexts/AuthContext/AuthContext'
 
 export default function Login() {
   const [isLoading , setIsLoading ] = useState(false)
   const [errMsg , setErrMsg ] = useState("")
+  const {setIsLoggedIn}  = useContext(authContext)
+
 
  const navigate = useNavigate()
  
@@ -22,6 +25,8 @@ export default function Login() {
     setErrMsg("")
    axios.post("https://note-sigma-black.vercel.app/api/v1/users/signIn",values).then(({data})=>{
     if(data.msg = "done"){
+      setIsLoggedIn(true)
+      localStorage.setItem("token" , data.token)
       navigate("/")
     }
    

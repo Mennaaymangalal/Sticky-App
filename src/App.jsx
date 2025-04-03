@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout/MainLayout';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
-import SignUp from './Pages/Signup/SignUp';
 import NotFound from './Pages/NotFound/NotFound';
 import Note from './Pages/Note/Note';
+import AuthContextProvider from './Contexts/AuthContext/AuthContext';
+import SignUp from './Pages/SignUp/SignUp';
 
 
 
@@ -21,7 +22,10 @@ const router =  createBrowserRouter([
 
   return (
     <>
-     <RouterProvider router={router}></RouterProvider>
+    <AuthContextProvider>
+    <RouterProvider router={router}></RouterProvider>
+    </AuthContextProvider>
+    
     </>
   )
 }
