@@ -59,7 +59,7 @@ const validationSchema = Yup.object({
         <div className="col-md-6">
           {/* Form */}
        <form onSubmit={handleSubmit} action="">
-       <h4 className='mb-2'>Register Now :</h4> 
+       <h4 className='m-2'>Register Now :</h4> 
 
         {/* Name Input */}
         <Form.Group className="mb-3"  controlId="formBasicName">

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import img from "../../assets/Image Apr 4, 2025, 10_17_40 PM.png"
+import img from "../../assets/Image Apr 5, 2025, 01_40_22 AM.png"
 import { Button, Form, Spinner } from 'react-bootstrap'
 import { useFormik } from 'formik'
 import * as Yup from "yup"
@@ -59,7 +59,7 @@ const validationSchema = Yup.object({
         <div className="col-md-6">
           {/* Form */}
        <form onSubmit={handleSubmit} action="">
-       <h4 className='mb-2'>Login Now :</h4> 
+       <h4 className='m-2'>Login Now :</h4> 
 
           {/* Email Input */}
          <Form.Group className="mb-3" controlId="formBasicEmail">
