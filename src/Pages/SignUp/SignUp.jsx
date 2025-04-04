@@ -13,11 +13,11 @@ export default function SignUp() {
  const navigate = useNavigate()
  
   const  initialValues={
-    "name":"mohamedali",
-    "email":"mohamedali9999999999@gmail.com",
-    "password":"Am1mk23@",
-    "age":24,
-    "phone":"01022734542"
+    "name":"",
+    "email":"",
+    "password":"",
+    "age":"",
+    "phone":""
   }
 
   function onSubmit(values) {

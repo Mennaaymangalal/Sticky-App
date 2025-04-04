@@ -16,8 +16,8 @@ export default function Login() {
  const navigate = useNavigate()
  
   const  initialValues={
-    "email":"mohamedali9999999999@gmail.com",
-    "password":"A123",   
+    "email":"",
+    "password":"",   
   }
 
 
