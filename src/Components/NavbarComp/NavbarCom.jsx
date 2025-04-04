@@ -6,8 +6,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { authContext } from '../../Contexts/AuthContext/AuthContext';
 import { Button } from 'react-bootstrap';
+import { counterContext } from '../../Contexts/CounterContext/CounterContextProvider';
 
 export default function  NavbarCom() {
+
+  const {counter} = useContext(counterContext)
 
  const {IsLoggedIn , setIsLoggedIn} = useContext(authContext)
  const navigate = useNavigate()
@@ -36,7 +39,7 @@ export default function  NavbarCom() {
             <Nav className="ms-auto d-flex align-items-center gap-2">
             <NavLink to={"note"}>
             <div className="">
-            <p className='text-white mb-0'>0 <i className="fa-solid fa-box-open text-white ps-1"></i></p>
+            <p className='text-white mb-0'>{counter}<i className="fa-solid fa-box-open text-white ps-1"></i></p>
             
             </div>
           </NavLink>

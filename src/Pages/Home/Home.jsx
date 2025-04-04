@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -6,11 +6,14 @@ import Modal from 'react-bootstrap/Modal';
 import { useFormik } from 'formik'
 import axios from 'axios';
 import Note from '../Note/Note';
+import { counterContext } from '../../Contexts/CounterContext/CounterContextProvider';
 
 export default function Home() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const {setCounter} = useContext(counterContext)
 
   const [userNote , setUserNote ] = useState(null)
 
@@ -47,8 +50,10 @@ export default function Home() {
       }).then((data)=>{
         setErrorf(false)
         setUserNote(data.data.notes)
+        setCounter(data.data.notes.length)
       }).catch((err)=>{
         setErrorf(true)
+        setCounter(0)
        console.log(err)
       })
     }

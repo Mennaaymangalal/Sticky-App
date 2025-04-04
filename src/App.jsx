@@ -5,6 +5,7 @@ import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthContextProvider from './Contexts/AuthContext/AuthContext';
 import SignUp from './Pages/SignUp/SignUp';
+import CounterContextProvider from './Contexts/CounterContext/CounterContextProvider';
 
 
 
@@ -21,7 +22,9 @@ const router =  createBrowserRouter([
   return (
     <>
     <AuthContextProvider>
-    <RouterProvider router={router}></RouterProvider>
+      <CounterContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+      </CounterContextProvider>    
     </AuthContextProvider>
     
     </>
