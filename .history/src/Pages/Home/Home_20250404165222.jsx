@@ -44,10 +44,9 @@ export default function Home() {
             token:`3b8ny__${localStorage.getItem("token")}`
         }
       }).then((data)=>{
-        setErrorf(false)
+        setErrorf
         setUserNote(data.data.notes)
       }).catch((err)=>{
-        setErrorf(true)
        console.log(err)
       })
     }
@@ -114,13 +113,9 @@ export default function Home() {
       </Modal>
 
       <div className="row">
-        {
-          errorf == true ? <h1>No Notes Found</h1> : <>
-           {
-          userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
-           }
-          </>
-        }     
+      {
+        userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
+      }
       </div>
 
      

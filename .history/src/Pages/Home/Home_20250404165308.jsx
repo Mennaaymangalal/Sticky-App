@@ -115,12 +115,11 @@ export default function Home() {
 
       <div className="row">
         {
-          errorf == true ? <h1>No Notes Found</h1> : <>
-           {
-          userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
-           }
-          </>
-        }     
+          errorf == true ? h1
+        }
+      {
+        userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
+      }
       </div>
 
      

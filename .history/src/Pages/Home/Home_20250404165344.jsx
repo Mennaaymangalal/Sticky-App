@@ -120,7 +120,8 @@ export default function Home() {
           userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
            }
           </>
-        }     
+        }
+     
       </div>
 
      

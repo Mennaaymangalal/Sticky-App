@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
-export default function Note({note , deleteNote}) {  
+export default function Note({note , deleteNote}) {
+  console.log(note)
   return (
     <>
      <div className="col-3 py-4">
@@ -14,8 +15,8 @@ export default function Note({note , deleteNote}) {
         {note.content}
         </Card.Text>
        <div className="d-flex justify-align-content-around">
-       <Button onClick={()=>deleteNote(note._id)} className='bg-transparent text-danger border-0'> <i className="fa-solid fa-trash"></i></Button>
-       <Button className='bg-transparent text-primary border-0'> <i className="fa-solid fa-pen-to-square"></i></Button>
+       <Button  className='bg-transparent text-danger border-0'> <i className="fa-solid fa-trash"></i></Button>
+       <Button className='bg-transparent text-primary border-0'> <i class="fa-solid fa-pen-to-square"></i></Button>
        </div>
       </Card.Body>
     </Card>

@@ -13,14 +13,13 @@ export default function Home() {
   const handleShow = () => setShow(true);
   const [userNote , setUserNote ] = useState(null)
 
-  const [errorf , setErrorf] = useState(false)
-
   
   const  initialValues={
     title:"",
     content:"",   
   }
-  function onSubmit(values) { 
+  function onSubmit(values) {
+ 
    axios.post("https://note-sigma-black.vercel.app/api/v1/notes",values,{
     headers:{
       token:`3b8ny__${localStorage.getItem("token")}`
@@ -44,10 +43,8 @@ export default function Home() {
             token:`3b8ny__${localStorage.getItem("token")}`
         }
       }).then((data)=>{
-        setErrorf(false)
         setUserNote(data.data.notes)
       }).catch((err)=>{
-        setErrorf(true)
        console.log(err)
       })
     }
@@ -60,9 +57,10 @@ export default function Home() {
         headers:{
           token:`3b8ny__${localStorage.getItem("token")}`
         }}).then((res)=>{
+          console.log(res)
           getUserNotes()
-        }).catch((err)=>{         
-          console.log(err)         
+        }).catch((err)=>{
+          console.log(err)
         })
     }
   
@@ -114,13 +112,9 @@ export default function Home() {
       </Modal>
 
       <div className="row">
-        {
-          errorf == true ? <h1>No Notes Found</h1> : <>
-           {
-          userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
-           }
-          </>
-        }     
+      {
+        userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
+      }
       </div>
 
      
