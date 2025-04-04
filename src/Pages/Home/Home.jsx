@@ -11,6 +11,7 @@ export default function Home() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const [userNote , setUserNote ] = useState(null)
 
   const [errorf , setErrorf] = useState(false)
@@ -117,7 +118,7 @@ export default function Home() {
         {
           errorf == true ? <h1>No Notes Found</h1> : <>
            {
-          userNote?.map((notes , index)=>(<Note deleteNote={deleteNote} note={notes} key={index}/>))
+          userNote?.map((notes , index)=>(<Note getUserNotes={getUserNotes} deleteNote={deleteNote} note={notes} key={index}/>))
            }
           </>
         }     
