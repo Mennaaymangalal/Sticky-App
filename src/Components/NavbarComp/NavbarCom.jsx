@@ -34,9 +34,10 @@ export default function  NavbarCom() {
           {
             IsLoggedIn ? 
             <Nav className="ms-auto d-flex align-items-center gap-2">
-               <NavLink to={"note"}>
+            <NavLink to={"note"}>
             <div className="">
-            <i className="fa-solid fa-box-open text-white "></i>
+            <p className='text-white mb-0'>0 <i className="fa-solid fa-box-open text-white ps-1"></i></p>
+            
             </div>
           </NavLink>
           <Nav  className=" text-white text-start text-decoration-none ">

@@ -39,7 +39,7 @@ export default function Note({note , deleteNote , getUserNotes}) {
 
   return (
     <>
-     <div className="col-3 py-4">
+     <div className="col-lg-3 py-4">
      <Card>
       <Card.Header className='fw-semibold'>{note.title}</Card.Header>
       <Card.Body>        
